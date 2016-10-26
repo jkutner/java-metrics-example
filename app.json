@@ -2,5 +2,13 @@
   "name": "Start on Heroku: Java",
   "description": "A barebones Java app, which can easily be deployed to Heroku.",
   "image": "heroku/java",
-  "addons": [ "heroku-postgresql" ]
+  "addons": [ "heroku-postgresql" ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/jkutner/heroku-buildpack-java-metrics.git"
+    },
+    {
+      "url": "heroku/java"
+    }
+  ]
 }
